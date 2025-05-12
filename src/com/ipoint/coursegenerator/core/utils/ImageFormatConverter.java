@@ -353,7 +353,7 @@ public class ImageFormatConverter {
 				if ((height != null) && (height > 0)) {
 					hints.put(PNGTranscoder.KEY_HEIGHT, height);
 				}
-				hints.put(PNGTranscoder.KEY_XML_PARSER_VALIDATING, new Boolean(false));
+				hints.put(PNGTranscoder.KEY_XML_PARSER_VALIDATING, false);
 				transcoder.setTranscodingHints(hints);
 			}
 			transcoder.transcode(trcoderInput, trcoderOutput);
