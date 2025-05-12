@@ -2,3 +2,5 @@
 /*.log
 /ilogos-course-generator-core.iml
 /.settings/
+.classpath
+.project
