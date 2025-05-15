@@ -1,5 +1,6 @@
 plugins {
     java
+    `maven-publish`
 }
 
 group = "com.ipoint"
@@ -57,4 +58,12 @@ dependencies {
     implementation("com.google.collections:google-collections:1.0-rc2")
     implementation("org.freehep:freehep-graphicsio-emf:$freehepGraphicsioVersion")
     implementation("org.freehep:freehep-graphicsio-svg:$freehepGraphicsioVersion")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
+        }
+    }
 }
